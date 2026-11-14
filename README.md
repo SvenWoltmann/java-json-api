@@ -22,7 +22,7 @@ java --add-modules jdk.incubator.json src/main/java/navigating/Navigate.java
 | `converting` | `Conversions` – the `as…()` methods, `toString()` vs. `asString()`; `Numbers` – exact and rounding number conversions, `BigDecimal` |
 | `optional` | `MissingValues` – `tryGet()` and `tryValue()`; `ChangingTypes` – a member that is a string in one document and a number in another |
 | `errors` | `ParseErrors` – `JsonParseException` for invalid JSON; `ValueErrors` – `JsonValueException` with the path to the value |
-| `generating` | `Generate` – building JSON from Java objects; `Modify` – changing an immutable `JsonValue`, and why not to call `equals()` |
+| `generating` | `Generate` – building JSON from Java objects; `MapOfOrder` – the member order of `Map.of()` changes from run to run; `Modify` – changing an immutable `JsonValue`, and why not to call `equals()` |
 | `threaddump` | `ThreadStates` – reads a JSON thread dump of JDK 26, 27 or 28; `Waiter` – a program to take such a dump from |
 | `comparison` | `JdkJeps`, `JacksonJeps`, `GsonJeps` – the same task with the JDK API, Jackson 3 and Gson; `JacksonBinding` – data binding to records with Jackson; `EdgeCases` – duplicate names, comments, fractions, strings and overflow in all three |
 

@@ -8,9 +8,10 @@ void main() {
       new Jep(540, "Simple JSON API"),
       new Jep(543, "Structured Concurrency"));
 
-  JsonObject release = JsonObject.of(Map.of(
-      "version", JsonNumber.of(28),
-      "jeps", JsonArray.of(jeps.stream().map(this::toJson).toList())));
+  var members = new LinkedHashMap<String, JsonValue>();
+  members.put("version", JsonNumber.of(28));
+  members.put("jeps", JsonArray.of(jeps.stream().map(this::toJson).toList()));
+  JsonObject release = JsonObject.of(members);
 
   IO.println(release);
   IO.println(Json.toDisplayString(release, "  "));

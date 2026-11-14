@@ -37,6 +37,7 @@ run navigating Navigate Navigate
 for p in Conversions Numbers; do run converting $p $p; done
 for p in MissingValues ChangingTypes; do run optional $p $p; done
 for p in ParseErrors ValueErrors; do run errors $p $p; done
+# MapOfOrder is left out: its output changes from run to run on purpose
 for p in Generate Modify; do run generating $p $p; done
 for v in 26 27 28; do
   run threaddump ThreadStates "ThreadStates-jdk-$v" "threaddumps/jdk-$v.json"
