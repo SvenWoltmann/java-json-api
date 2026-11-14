@@ -2,7 +2,8 @@ import tools.jackson.databind.ObjectMapper;
 
 record Jep(int number, String title, boolean preview, boolean incubator) {}
 record Successor(int version, String ga) {}
-record Release(int version, String ga, boolean lts, List<Jep> jeps, Successor successor) {}
+record Release(int version, String ga, boolean lts, List<Jep> jeps,
+               Successor successor) {}
 
 void main() throws IOException {
   Release release = new ObjectMapper()

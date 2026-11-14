@@ -3,8 +3,8 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 void main() throws IOException {
-  JsonObject release = JsonParser.parseString(Files.readString(Path.of("release.json")))
-      .getAsJsonObject();
+  String json = Files.readString(Path.of("release.json"));
+  JsonObject release = JsonParser.parseString(json).getAsJsonObject();
 
   for (JsonElement element : release.getAsJsonArray("jeps")) {
     JsonObject jep = element.getAsJsonObject();

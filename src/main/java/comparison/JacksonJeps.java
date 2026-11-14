@@ -2,7 +2,8 @@ import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.ObjectMapper;
 
 void main() throws IOException {
-  JsonNode release = new ObjectMapper().readTree(Files.readString(Path.of("release.json")));
+  String json = Files.readString(Path.of("release.json"));
+  JsonNode release = new ObjectMapper().readTree(json);
 
   for (JsonNode jep : release.get("jeps")) {
     boolean preview = jep.path("preview").asBoolean(false);
