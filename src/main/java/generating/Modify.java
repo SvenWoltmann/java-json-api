@@ -8,10 +8,4 @@ void main() throws IOException {
   members.remove("jeps");
   members.put("featureFreeze", JsonString.of("2026-12-03"));
   IO.println(JsonObject.of(members));
-
-  // No equals() contract: compare Java values instead
-  JsonValue a = Json.parse("{ \"version\": 28 }");
-  JsonValue b = Json.parse("{ \"version\": 28 }");
-  IO.println(a.equals(b));
-  IO.println(a.get("version").asInt() == b.get("version").asInt());
 }

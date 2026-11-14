@@ -1,4 +1,2 @@
 WARNING: Using incubator modules: jdk.incubator.json
 {"version":28,"ga":"2027-03-09","lts":false,"successor":{"version":29,"ga":null},"featureFreeze":"2026-12-03"}
-false
-true
