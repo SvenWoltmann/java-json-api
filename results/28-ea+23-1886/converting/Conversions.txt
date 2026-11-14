@@ -1,7 +1,4 @@
 WARNING: Using incubator modules: jdk.incubator.json
-2027-03-09
-"2027-03-09"
-"2027-03-09"
 false
 28
 28.0

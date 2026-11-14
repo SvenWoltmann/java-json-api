@@ -34,7 +34,7 @@ run() { # <dir> <program> <output-name> [program arguments...]
 run intro QuickStart QuickStart
 run parsing ValueTypes ValueTypes
 run navigating Navigate Navigate
-for p in Conversions Numbers; do run converting $p $p; done
+for p in AsStringVsToString Conversions Numbers; do run converting $p $p; done
 for p in MissingValues ChangingTypes; do run optional $p $p; done
 for p in ParseErrors ValueErrors; do run errors $p $p; done
 # MapOfOrder is left out: its output changes from run to run on purpose

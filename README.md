@@ -19,7 +19,7 @@ java --add-modules jdk.incubator.json src/main/java/navigating/Navigate.java
 | `intro` | `QuickStart` – parse, navigate, convert in three lines |
 | `parsing` | `ValueTypes` – the six `JsonValue` subtypes in an exhaustive `switch` |
 | `navigating` | `Navigate` – `get(String)`, `get(int)`, iterating over arrays and objects |
-| `converting` | `Conversions` – the `as…()` methods, `toString()` vs. `asString()`; `Numbers` – exact and rounding number conversions, `BigDecimal` |
+| `converting` | `AsStringVsToString` – `asString()` vs. `toString()`; `Conversions` – the other `as…()` methods; `Numbers` – exact and rounding number conversions, `BigDecimal` |
 | `optional` | `MissingValues` – `tryGet()` and `tryValue()`; `ChangingTypes` – a member that is a string in one document and a number in another |
 | `errors` | `ParseErrors` – `JsonParseException` for invalid JSON; `ValueErrors` – `JsonValueException` with the path to the value |
 | `generating` | `Generate` – building JSON from Java objects; `MapOfOrder` – the member order of `Map.of()` changes from run to run; `Modify` – changing an immutable `JsonValue`, and why not to call `equals()` |
