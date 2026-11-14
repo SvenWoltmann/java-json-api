@@ -41,7 +41,7 @@ for p in Generate Modify; do run generating $p $p; done
 for v in 26 27 28; do
   run threaddump ThreadStates "ThreadStates-jdk-$v" "threaddumps/jdk-$v.json"
 done
-for p in JdkJeps JacksonJeps GsonJeps JacksonBinding; do run comparison $p $p; done
+for p in JdkJeps JacksonJeps GsonJeps JacksonBinding EdgeCases; do run comparison $p $p; done
 
 if [[ ${#FAILED[@]} -gt 0 ]]; then
   printf 'Failed: %s\n' "${FAILED[@]}" >&2

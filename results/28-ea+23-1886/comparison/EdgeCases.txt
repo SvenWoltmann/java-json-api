@@ -1,0 +1,25 @@
+WARNING: Using incubator modules: jdk.incubator.json
+{ "version": 28, "version": 29 }
+  JDK:     JsonParseException
+  Jackson: 29
+  Gson:    29
+{ // Java 28 "version": 28 }
+  JDK:     JsonParseException
+  Jackson: StreamReadException
+  Gson:    28
+{ "version": 345.6 }
+  JDK:     JsonValueException
+  Jackson: 345
+  Gson:    345
+{ "version": "28" }
+  JDK:     JsonValueException
+  Jackson: 28
+  Gson:    28
+{ "version": 2147483648 }
+  JDK:     JsonValueException
+  Jackson: JsonNodeException
+  Gson:    -2147483648
+{ }
+  JDK:     JsonValueException
+  Jackson: NullPointerException
+  Gson:    NullPointerException
