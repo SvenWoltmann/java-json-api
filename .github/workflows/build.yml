@@ -1,0 +1,55 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    # jdk.java.net replaces the JDK 28 early-access build about once a week.
+    # A weekly run shows whether a new build changes what the article quotes.
+    - cron: '41 5 * * 2'
+
+jobs:
+  build:
+    name: Build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      # The examples need JDK 28 with the incubator module jdk.incubator.json
+      # (JEP 540). jdk.java.net only offers the newest early-access build, so
+      # this is not always the build the article was written with.
+      - name: Set up JDK 28 early access
+        uses: oracle-actions/setup-java@v1
+        with:
+          website: jdk.java.net
+          release: 28
+
+      - name: Compile all programs
+        run: mvn -B -q compile
+
+      - name: Download Jackson and Gson for the comparison programs
+        run: mvn -B -q dependency:copy-dependencies
+
+      # Fails if a program ends with an exception
+      - name: Run all examples
+        run: scripts/run-examples.sh "$JAVA_HOME"
+
+      # Reports outputs that differ from the committed results of build
+      # 28-ea+23 as warnings; never fails the build.
+      - name: Compare outputs with the committed results
+        if: always()
+        run: |
+          new=$(ls -td results/*/ | head -1)
+          if [ "$new" = "results/28-ea+23-1886/" ]; then
+            git diff --stat --exit-code results/ || echo "::warning::Outputs differ from the committed results"
+          else
+            diff -r -x environment.txt results/28-ea+23-1886 "$new" \
+              | tee -a "$GITHUB_STEP_SUMMARY" \
+              || echo "::warning::Outputs of $new differ from build 28-ea+23"
+          fi

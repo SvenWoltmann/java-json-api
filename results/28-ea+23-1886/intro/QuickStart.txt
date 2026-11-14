@@ -1,0 +1,2 @@
+WARNING: Using incubator modules: jdk.incubator.json
+Java 28 (GA 2027-03-09), first JEP: Value Objects

@@ -1,0 +1,6 @@
+WARNING: Using incubator modules: jdk.incubator.json
+28, GA 2027-03-09
+Jep[number=401, title=Value Objects, preview=true, incubator=false]
+Jep[number=540, title=Simple JSON API, preview=false, incubator=true]
+Jep[number=543, title=Structured Concurrency, preview=false, incubator=false]
+Successor[version=29, ga=null]

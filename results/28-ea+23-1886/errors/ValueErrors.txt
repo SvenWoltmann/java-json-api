@@ -1,0 +1,6 @@
+WARNING: Using incubator modules: jdk.incubator.json
+JsonObject member "preview" does not exist. Path: "{jeps[2". Location: line 7, position 4.
+JsonArray index 3 out of bounds for length 3. Path: "{jeps". Location: line 4, position 10.
+JsonNumber is not a JsonString. Path: "{version". Location: line 1, position 13.
+JsonArray is not a JsonObject. Path: "{jeps". Location: line 4, position 10.
+JsonNull is not a JsonString. Path: "{successor{ga". Location: line 9, position 38.

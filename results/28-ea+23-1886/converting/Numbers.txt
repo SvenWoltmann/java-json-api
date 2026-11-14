@@ -1,0 +1,10 @@
+WARNING: Using incubator modules: jdk.incubator.json
+123
+23456
+345.6 cannot be represented as an int. Path: "". Location: line 0, position 0.
+2147483648 cannot be represented as an int. Path: "". Location: line 0, position 0.
+2147483648
+3.141592653589793
+1.8E309 cannot be represented as a double. Path: "". Location: line 0, position 0.
+19.990
+19.990

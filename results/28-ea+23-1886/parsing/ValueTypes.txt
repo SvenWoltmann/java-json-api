@@ -1,0 +1,6 @@
+WARNING: Using incubator modules: jdk.incubator.json
+version: number 28
+ga: string 2027-03-09
+lts: boolean false
+jeps: array with 3 elements
+successor: object with 2 members

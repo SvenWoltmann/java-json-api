@@ -1,0 +1,9 @@
+WARNING: Using incubator modules: jdk.incubator.json
+Structured Concurrency
+29
+JEP 401: Value Objects
+JEP 540: Simple JSON API
+JEP 543: Structured Concurrency
+[401, 540, 543]
+version = 29
+ga = null

@@ -1,0 +1,9 @@
+WARNING: Using incubator modules: jdk.incubator.json
+Expecting a JSON Object member name. Path: "{". Location: line 0, position 17.
+  line 0, position 17
+Duplicate member name: "version" was already parsed. Path: "{". Location: line 0, position 17.
+  line 0, position 17
+Expecting a JSON Object member name. Path: "{". Location: line 0, position 2.
+  line 0, position 2
+Expecting a JSON Object member name. Path: "{". Location: line 1, position 2.
+  line 1, position 2

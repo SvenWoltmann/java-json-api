@@ -1,0 +1,18 @@
+WARNING: Using incubator modules: jdk.incubator.json
+Runtime 27+35-2325
+<root> (parent: none)
+  #3 main: TIMED_WAITING
+  #14 Reference Handler: RUNNABLE
+  #15 Finalizer: WAITING, waiting on java.lang.Object@b730349
+  #16 Signal Dispatcher: RUNNABLE
+  #31 Notification Thread: RUNNABLE
+  #32 Common-Cleaner: TIMED_WAITING, waiting on java.lang.Object@ec061e9
+  #42 VirtualThread-unblocker: RUNNABLE
+  #46 Attach Listener: RUNNABLE
+  #43 sleeper: TIMED_WAITING
+java.util.concurrent.ThreadPoolExecutor@6a01e23 (parent: <root>)
+  #41 pool-1-thread-1: WAITING, waiting on java.lang.Object@46133228
+ForkJoinPool-1/jdk.internal.vm.SharedThreadContainer@2596b489 (parent: <root>)
+  #44 ForkJoinPool-1-worker-1: TIMED_WAITING
+  #45 ForkJoinPool-1-delayScheduler: TIMED_WAITING
+{RUNNABLE=5, TIMED_WAITING=5, WAITING=2}

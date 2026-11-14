@@ -1,0 +1,8 @@
+WARNING: Using incubator modules: jdk.incubator.json
+Value Objects (Preview)
+Simple JSON API
+Structured Concurrency
+Java 29, GA: not set
+Optional[null]
+Optional.empty
+Optional.empty

@@ -1,0 +1,11 @@
+{
+  "version": 28,
+  "ga": "2027-03-09",
+  "lts": false,
+  "jeps": [
+    { "number": 401, "title": "Value Objects", "preview": true },
+    { "number": 540, "title": "Simple JSON API", "incubator": true },
+    { "number": 543, "title": "Structured Concurrency" }
+  ],
+  "successor": { "version": 29, "ga": null }
+}
