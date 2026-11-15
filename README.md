@@ -25,7 +25,7 @@ java --add-modules jdk.incubator.json src/main/java/navigating/Navigate.java
 | `generating` | `Generate` – building JSON from Java objects; `MapOfOrder` – the member order of `Map.of()` changes from run to run; `Modify` – changing an immutable `JsonValue` |
 | `equality` | `Equality` – why `equals()` does not compare JSON values, and what to do instead |
 | `threaddump` | `ThreadStates` – reads a JSON thread dump of JDK 26, 27 or 28; `Waiter` – a program to take such a dump from |
-| `comparison` | `JdkJeps`, `JacksonJeps`, `GsonJeps` – the same task with the JDK API, Jackson 3 and Gson; `JacksonBinding` – data binding to records with Jackson; `EdgeCases` – duplicate names, comments, fractions, strings and overflow in all three |
+| `comparison` | `JdkJeps`, `JacksonJeps`, `GsonJeps` – the same task with the JDK API, Jackson 3 and Gson; `JacksonBinding`, `GsonBinding` – data binding to records with Jackson and Gson; `EdgeCases` – duplicate names, comments, fractions, strings and overflow in all three |
 
 `threaddumps/` holds the dumps the article analyzes, taken from `Waiter` with JDK 26.0.1, 27 and 28-ea+23:
 
