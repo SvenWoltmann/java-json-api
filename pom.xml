@@ -14,6 +14,16 @@
   <properties>
     <maven.compiler.release>28</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- Plugin versions -->
+    <spotless.version>3.11.0</spotless.version>
+
+    <!-- SonarQube Cloud setup -->
+    <sonar.projectKey>SvenWoltmann_java-json-api</sonar.projectKey>
+    <sonar.organization>svenwoltmann</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <!-- The programs are the examples of the article; there is nothing to unit-test in them. -->
+    <sonar.coverage.exclusions>**/*.java</sonar.coverage.exclusions>
   </properties>
 
   <dependencies>
@@ -40,6 +50,30 @@
             <arg>--add-modules</arg>
             <arg>jdk.incubator.json</arg>
           </compilerArgs>
+        </configuration>
+      </plugin>
+
+      <!-- Spotless plugin to verify code style. Unlike the other article
+           repositories without google-java-format: the listings are wrapped
+           for the code column of the article, and text blocks start on the
+           line of the method call; google-java-format would rewrap both. -->
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+        <version>${spotless.version}</version>
+        <configuration>
+          <java>
+            <removeUnusedImports>
+              <engine>google-java-format</engine>
+            </removeUnusedImports>
+            <trimTrailingWhitespace/>
+            <endWithNewline/>
+            <indent>
+              <spaces>true</spaces>
+              <spacesPerTab>2</spacesPerTab>
+            </indent>
+            <lineEndings>UNIX</lineEndings>
+          </java>
         </configuration>
       </plugin>
     </plugins>

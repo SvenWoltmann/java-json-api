@@ -9,6 +9,8 @@ on:
   schedule:
     # jdk.java.net replaces the JDK 28 early-access build about once a week.
     # A weekly run shows whether a new build changes what the article quotes.
+    # It also keeps the Sonar token in use: SonarQube Cloud removes tokens
+    # unused for 60 days, and Dependabot builds skip the Sonar step.
     - cron: '41 5 * * 2'
 
 jobs:
@@ -20,6 +22,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
       # The examples need JDK 28 with the incubator module jdk.incubator.json
       # (JEP 540). jdk.java.net only offers the newest early-access build, so
@@ -30,8 +34,25 @@ jobs:
           website: jdk.java.net
           release: 28
 
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v6
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Verify code format
+        run: mvn -B spotless:check
+
       - name: Compile all programs
         run: mvn -B -q compile
+
+      - name: Analyze code with Sonar
+        if: ${{ env.SONAR_TOKEN }} # the token is not available in Dependabot-triggered builds
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
 
       - name: Download Jackson and Gson for the comparison programs
         run: mvn -B -q dependency:copy-dependencies

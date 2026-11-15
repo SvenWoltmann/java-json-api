@@ -1,5 +1,10 @@
 # Java JSON API
 
+[![Build](https://github.com/SvenWoltmann/java-json-api/actions/workflows/build.yml/badge.svg)](https://github.com/SvenWoltmann/java-json-api/actions/workflows/build.yml)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=SvenWoltmann_java-json-api&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=SvenWoltmann_java-json-api)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=SvenWoltmann_java-json-api&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=SvenWoltmann_java-json-api)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=SvenWoltmann_java-json-api&metric=security_rating)](https://sonarcloud.io/dashboard?id=SvenWoltmann_java-json-api)
+
 Example code for the HappyCoders.eu article [Java JSON Parser: The Simple JSON API in Java 28 (JEP 540)](https://www.happycoders.eu/java/java-json-api/) – [JEP 540](https://openjdk.org/jeps/540), the incubator module `jdk.incubator.json`, which parses and generates JSON without an external library. The German version is [Java JSON Parser: die Simple JSON API in Java 28 (JEP 540)](https://www.happycoders.eu/de/java/java-json-api/).
 
 ## Requirements
