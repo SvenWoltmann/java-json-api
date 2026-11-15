@@ -19,8 +19,8 @@
               "java.base\/java.lang.Thread.sleepNanos0(Native Method)",
               "java.base\/java.lang.Thread.sleepNanos(Thread.java:587)",
               "java.base\/java.lang.Thread.sleep(Thread.java:679)",
-              "Waiter.sleepTenMinutes(Waiter.java:18)",
-              "Waiter.main(Waiter.java:13)",
+              "Waiter.sleepTenMinutes(Waiter.java:26)",
+              "Waiter.main(Waiter.java:8)",
               "java.base\/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)",
               "java.base\/java.lang.reflect.Method.invoke(Method.java:583)",
               "jdk.compiler\/com.sun.tools.javac.launcher.SourceLauncher.execute(SourceLauncher.java:266)",
@@ -124,8 +124,7 @@
               "java.base\/java.lang.VirtualThread.sleepNanos(VirtualThread.java:994)",
               "java.base\/java.lang.Thread.sleepNanos(Thread.java:585)",
               "java.base\/java.lang.Thread.sleep(Thread.java:679)",
-              "Waiter.sleepTenMinutes(Waiter.java:18)",
-              "Waiter.lambda$main$1(Waiter.java:12)",
+              "Waiter.sleepTenMinutes(Waiter.java:26)",
               "java.base\/java.lang.VirtualThread.run(VirtualThread.java:470)"
             ]
           }
@@ -147,7 +146,9 @@
               "java.base\/java.lang.Object.wait0(Native Method)",
               "java.base\/java.lang.Object.wait(Object.java:467)",
               "java.base\/java.lang.Object.wait(Object.java:420)",
-              "Waiter.lambda$main$0(Waiter.java:8)",
+              "Waiter.waitUntilInterrupted(Waiter.java:16)",
+              "Waiter.lambda$main$0(Waiter.java:6)",
+              "java.base\/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)",
               "java.base\/java.util.concurrent.FutureTask.run(FutureTask.java:330)",
               "java.base\/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)",
               "java.base\/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)",

@@ -40,6 +40,8 @@ java --add-modules jdk.incubator.json src/main/java/threaddump/ThreadStates.java
 
 To take a dump of your own, start `Waiter` and call `jcmd <pid> Thread.dump_to_file -format=json <file>`.
 
+When `Waiter` changed later, the stacks of its three threads in these dumps were replaced with those of fresh dumps from the same JDK builds, so that their line numbers match the source. Everything else is the original recording, and the outputs of `ThreadStates` did not change.
+
 ### Comparison with Jackson and Gson
 
 The comparison programs need Jackson and Gson. Maven downloads them into `target/dependency/`:

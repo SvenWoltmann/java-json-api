@@ -29,7 +29,10 @@ jobs:
       # (JEP 540). jdk.java.net only offers the newest early-access build, so
       # this is not always the build the article was written with.
       - name: Set up JDK 28 early access
-        uses: oracle-actions/setup-java@v1
+        # Pinned to the commit, not the tag: a tag can be moved, and only
+        # GitHub's own actions are exempt from that risk. Dependabot keeps
+        # SHA pins current and updates the comment with them.
+        uses: oracle-actions/setup-java@fff43251af9936a0e6a4d5d0946e14f1680e9b6b # v1.5.0
         with:
           website: jdk.java.net
           release: 28
