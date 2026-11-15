@@ -1,15 +1,16 @@
 // Keeps a few threads in different states, so that a thread dump has
 // something to show: jcmd <pid> Thread.dump_to_file -format=json <file>
+final Object lock = new Object();
+
 void main() {
-  Object lock = new Object();
   try (ExecutorService pool = Executors.newFixedThreadPool(2)) {
-    pool.submit(() -> waitUntilInterrupted(lock));
+    pool.submit(this::waitUntilInterrupted);
     Thread.ofVirtual().name("sleeper").start(this::sleepTenMinutes);
     sleepTenMinutes();
   }
 }
 
-void waitUntilInterrupted(Object lock) {
+void waitUntilInterrupted() {
   synchronized (lock) {
     try {
       while (!Thread.currentThread().isInterrupted()) {
