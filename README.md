@@ -1,6 +1,6 @@
 # Java JSON API
 
-Example code for a HappyCoders.eu article on the Simple JSON API of Java 28 – [JEP 540](https://openjdk.org/jeps/540), the incubator module `jdk.incubator.json`, which parses and generates JSON without an external library. The article will be linked here once it is published; until then, see [happycoders.eu](https://www.happycoders.eu/).
+Example code for the HappyCoders.eu article [Java JSON Parser: The Simple JSON API in Java 28 (JEP 540)](https://www.happycoders.eu/java/java-json-api/) – [JEP 540](https://openjdk.org/jeps/540), the incubator module `jdk.incubator.json`, which parses and generates JSON without an external library. The German version is [Java JSON Parser: die Simple JSON API in Java 28 (JEP 540)](https://www.happycoders.eu/de/java/java-json-api/).
 
 ## Requirements
 
